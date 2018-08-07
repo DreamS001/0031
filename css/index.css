@@ -8,40 +8,101 @@
 
 .bj-img{
 	width: 100%;
-	background: url('../images/web-bj.png');
+	background: url('../images/web-bj.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
+.header{
+	background-color: #FFF;
+	width: 100%;
+	height: 80px;
+	z-index: 999;
+}
 header{
 	width: 100%;
-	height: 145px;
+	height: 80px;
 	overflow: hidden;
 	position: relative;
+	display: flex;
+	align-items: center;
 }
 
 .title-box{
 	width: 230px;
 	height: 63px;
 	background: red;
-	margin: 40px auto;
+	margin: 0 20px 0 40px;
 	background: url('../images/logo.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+header ul{
+	width: 868px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-left: 45px;
+}
+header ul>li{
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: 700;
+	padding: 5px;
+	box-sizing: border-box;
+	border: 1px solid #000;
+	border-radius: 10px;
+	background-color: #fffef6;
+}
 
 .hot-tel{
+	width: 190px;
 	position: absolute;
-	top: 60px;
-	right: 0;
-	font-size: 24px;
+	top: -110px;
+	right: 60px;
+	font-size: 20px;
 	color: #000000;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #FFF;
+	padding: 20px 10px;
+	box-sizing: border-box;
+}
+.hot-tel:after{
+	display: block;
+	content: "";
+	width: 20px;
+	height:20px;
+	background: #FFF;
+	transform: rotate(-45deg);
+	position: absolute;
+	left: 180px;
+	bottom: 30px;
 }
 .hot-tel .tel{
 	color: #c13535;
 }
 
-
+.telBox{
+	width: 80px;
+	height: 150px;
+	background-color: #c13535;
+	position: fixed;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #FFF;
+}
+.boxt{
+	position: relative;
+	display: none;
+}
 
 .content{
 	width: 100%;
@@ -437,10 +498,36 @@ footer .top-box>div .list-t .list-tel{
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
+	.header{
+		background-color: #FFF;
+		width: 100%;
+		height:1.267rem;
+		z-index: 999;
+	}
 	.containers{
 		width: 10.0rem;
 		margin: 0 auto;
 		padding: 0 0.427rem;
+	}
+	.btns{
+		width: 0.8rem;
+		height: 0.8rem;
+		background-color: #c13535;
+		position: absolute;
+		top: 0.30rem;
+		left: 0.50rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-left: 0.067rem;
+		box-sizing: border-box;
+	}
+	.btns div{
+		width: 0.667rem;
+		height: 0.04rem;
+		background-color: #FFF;
+		margin-top: 0.16rem;
 	}
 	header{
 		width: 100%;
@@ -450,6 +537,27 @@ footer .top-box>div .list-t .list-tel{
 		padding: 0.4rem 0;
 	}
 
+	.list-box{
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.8);
+		display: none;
+	}
+	.list-box ul{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.list-box ul>li{
+		width: 100%;
+		height: 0.8rem;
+		font-size: 0.213rem;
+		padding: 0.267rem 0.8rem;
+		box-sizing: border-box;
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+	}
 	.title-box{
 		width: 1.6rem;
 		height: 0.44rem;
@@ -461,11 +569,14 @@ footer .top-box>div .list-t .list-tel{
 	}
 
 	.hot-tel{
+		width: 3.333rem;
 		position: absolute;
-		top: 0.507rem;
-		right: 0;
+		top: 0.35rem;
+		right: 0.35rem;
 		font-size: 0.267rem;
 		color: #000000;
+		padding: 0.133rem 0;
+		box-sizing: border-box;
 	}
 	.phone-img{
 		display: inline-block;
@@ -772,7 +883,7 @@ footer .top-box>div .list-t .list-tel{
 
 	footer {
 		margin-top: 0;
-		background: url('../images/moblie-footer.png');
+		background: url('../images/moblie-footer.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
